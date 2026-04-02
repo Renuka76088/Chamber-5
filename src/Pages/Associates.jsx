@@ -1,5 +1,5 @@
 import React from 'react';
-import Vedio from "../Assets/1600 (3).mp4";
+import Vedio from "../assets/1600 (3).mp4";
 
 function Associates() {
   return (
