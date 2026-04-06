@@ -1,9 +1,11 @@
 
 import React, { useEffect,useState,useRef } from "react";
-import { Menu, X, ChevronDown,ChevronLeft, ChevronRight } from "lucide-react";
+import { Menu, X, ChevronDown,ChevronLeft, ChevronRight, MessageCircle, Send, User, Bot } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6";
+import { motion, AnimatePresence } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import { FaWhatsapp } from "react-icons/fa";
+// import { MessageCircle } from "lucide-react";
 
 function Pageheader() {
 
@@ -11,6 +13,30 @@ function Pageheader() {
      const [open, setOpen] = useState(false);
       const [activeDropdown, setActiveDropdown] = useState(null);
       const navigate = useNavigate();
+      const [chatOpen, setChatOpen] = useState(false);
+const [messages, setMessages] = useState([
+  { from: "bot", text: "Hello 👋 How can I help you?" }
+]);
+const [input, setInput] = useState("");
+
+const handleSendMessage = () => {
+  if (!input.trim()) return;
+
+  const userMsg = { from: "user", text: input };
+
+  // AI response logic (same as before)
+  const botReply = {
+    from: "bot",
+    text: input.toLowerCase().includes("service")
+      ? "We provide textile-related services, trade support, and industry guidance."
+      : input.toLowerCase().includes("contact")
+      ? "You can contact us via the Contact Us page or WhatsApp."
+      : "Thank you for your query! Our team will assist you shortly.",
+  };
+
+  setMessages([...messages, userMsg, botReply]);
+  setInput("");
+};
  
       const menuItems = [
   { name: "Home", path: "/" },
@@ -306,8 +332,100 @@ const dropdownItems = [
 >
   <FaWhatsapp className="text-2xl" />
 </a>
-    
-    
+{/* CHAT BOT TRIGGER BUTTON */}
+      <motion.div
+        whileHover={{ scale: 1.1 }}
+        whileTap={{ scale: 0.9 }}
+        onClick={() => setChatOpen(true)}
+        className="fixed bottom-6 right-6 z-50 bg-gradient-to-tr from-[#0c2d57] to-[#4a86d4] text-white p-4 rounded-full shadow-[0_10px_25px_rgba(12,45,87,0.4)] cursor-pointer border-2 border-white/20"
+      >
+        <MessageCircle size={28} />
+        {/* Notification Dot */}
+        <span className="absolute top-0 right-0 w-4 h-4 bg-[#f26522] border-2 border-white rounded-full"></span>
+      </motion.div>
+
+      {/* CHAT WINDOW */}
+      <AnimatePresence>
+        {chatOpen && (
+          <motion.div
+            initial={{ opacity: 0, y: 50, scale: 0.9 }}
+            animate={{ opacity: 1, y: 0, scale: 1 }}
+            exit={{ opacity: 0, y: 50, scale: 0.9 }}
+            className="fixed bottom-24 right-6 w-[350px] md:w-[380px] h-[500px] bg-white/95 backdrop-blur-xl shadow-[0_20px_50px_rgba(0,0,0,0.15)] rounded-[24px] z-50 flex flex-col overflow-hidden border border-gray-100"
+          >
+            {/* PREMIUM HEADER */}
+            <div className="bg-[#0c2d57] bg-gradient-to-r from-[#0c2d57] to-[#1a4a8d] p-5 text-white flex justify-between items-center">
+              <div className="flex items-center gap-3">
+                <div className="relative">
+                  <div className="w-10 h-10 bg-white/10 rounded-full flex items-center justify-center border border-white/20">
+                    <Bot size={22} className="text-blue-200" />
+                  </div>
+                  <span className="absolute bottom-0 right-0 w-3 h-3 bg-green-400 border-2 border-[#0c2d57] rounded-full"></span>
+                </div>
+                <div>
+                  <h3 className="font-bold text-sm tracking-wide">Parekh AI Support</h3>
+                  <p className="text-[10px] text-blue-200 opacity-80">Online | Replies instantly</p>
+                </div>
+              </div>
+              <button 
+                onClick={() => setChatOpen(false)}
+                className="hover:bg-white/10 p-2 rounded-full transition-colors"
+              >
+                <X size={20} />
+              </button>
+            </div>
+
+            {/* MESSAGES AREA */}
+            <div className="flex-1 p-4 overflow-y-auto space-y-4 bg-[#f8fafc]/50">
+              {messages.map((msg, i) => (
+                <motion.div
+                  initial={{ opacity: 0, x: msg.from === "bot" ? -10 : 10 }}
+                  animate={{ opacity: 1, x: 0 }}
+                  key={i}
+                  className={`flex ${msg.from === "bot" ? "justify-start" : "justify-end"}`}
+                >
+                  <div className={`flex gap-2 max-w-[85%] ${msg.from === "bot" ? "flex-row" : "flex-row-reverse"}`}>
+                    <div className={`mt-auto w-6 h-6 rounded-full flex items-center justify-center text-[10px] shadow-sm ${msg.from === "bot" ? "bg-white text-[#0c2d57]" : "bg-[#f26522] text-white"}`}>
+                      {msg.from === "bot" ? <Bot size={12}/> : <User size={12}/>}
+                    </div>
+                    <div
+                      className={`p-3.5 rounded-2xl text-[13.5px] leading-relaxed shadow-sm ${
+                        msg.from === "bot"
+                          ? "bg-white text-gray-700 rounded-bl-none border border-gray-100"
+                          : "bg-[#0c2d57] text-white rounded-br-none"
+                      }`}
+                    >
+                      {msg.text}
+                    </div>
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* MODERN INPUT AREA */}
+            <div className="p-4 bg-white border-t border-gray-100">
+              <div className="flex items-center gap-2 bg-gray-50 p-1.5 rounded-xl border border-gray-200 focus-within:border-[#4a86d4] focus-within:ring-1 focus-within:ring-[#4a86d4]/20 transition-all">
+                <input
+                  value={input}
+                  onChange={(e) => setInput(e.target.value)}
+                  onKeyPress={(e) => e.key === 'Enter' && handleSendMessage()} // Add your send logic here
+                  placeholder="Ask about fabrics, services..."
+                  className="flex-1 bg-transparent px-3 py-2 outline-none text-sm text-gray-700 placeholder:text-gray-400"
+                />
+                <button
+                  onClick={handleSendMessage} // Add your send logic here
+                  className="bg-[#f26522] hover:bg-[#d9561a] text-white p-2.5 rounded-lg transition-all shadow-md active:scale-95"
+                >
+                  <Send size={18} />
+                </button>
+              </div>
+              <p className="text-[9px] text-center text-gray-400 mt-2 tracking-tight">
+                Powered by Parekh Chamber of Textile AI Desk
+              </p>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   )
 }
