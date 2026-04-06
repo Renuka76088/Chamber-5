@@ -104,7 +104,7 @@ export default function Footer() {
           <div className="text-[13px] text-white flex items-center gap-1">
             Developed by 
             <span className="font-semibold flex items-center gap-1">
-              PNC <ArrowUpRight size={14}/>
+              DSS <ArrowUpRight size={14}/>
             </span>
           </div>
         </div>
