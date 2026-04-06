@@ -6,12 +6,12 @@ const MediaGallery = () => {
   const categories = ['All', 'Events', 'Workshops', 'Conferences'];
 
   const mediaItems = [
-    { id: 1, type: 'image', category: 'Events', src: 'https://img.freepik.com/premium-photo/hosting-panel-discussion-significance-generative-ai_1169648-121343.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Annual Expo 2025' },
-    { id: 2, type: 'image', category: 'Workshops', src: 'https://img.freepik.com/premium-photo/group-people-sitting-around-conference-table-with-one-them-wearing-suit_1206963-27923.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Tailoring Workshop' },
-    { id: 3, type: 'image', category: 'Conferences', src: 'https://img.freepik.com/premium-photo/group-people-sitting-around-conference-table-with-one-them-wearing-suit_1206963-27923.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Global Textile Summit' },
-    { id: 4, type: 'image', category: 'Events', src: 'https://img.freepik.com/premium-photo/large-group-people-are-sitting-room-with-sign-that-says-no_1206963-28246.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Award Ceremony' },
-    { id: 5, type: 'image', category: 'Workshops', src: 'https://img.freepik.com/premium-photo/asian-indian-business-people-corporate-culture-working-office-concept-with-laptop-papers-meetings-presentations-discussions_466689-15135.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Fabric Printing Class' },
-    { id: 6, type: 'image', category: 'Conferences', src: 'https://img.freepik.com/premium-photo/group-people-sit-around-table-conference-room_1298309-36716.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Stakeholder Meeting' },
+    { id: 1, type: 'image', category: 'Events', src: 'https://img.freepik.com/premium-photo/person-working-embroidery-workshop_862994-169809.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Annual Expo 2025' },
+    { id: 2, type: 'image', category: 'Workshops', src: 'https://img.freepik.com/free-photo/sewing-threads-many-colors-needle-thimble-placed-neatly_463209-36.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Tailoring Workshop' },
+    { id: 3, type: 'image', category: 'Conferences', src: 'https://img.freepik.com/free-photo/texture-orange-red-crumpled-fabric_23-2148516009.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Global Textile Summit' },
+    { id: 4, type: 'image', category: 'Events', src: 'https://img.freepik.com/premium-photo/full-frame-shot-crumpled-red-satin_1627186-281.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Award Ceremony' },
+    { id: 5, type: 'image', category: 'Workshops', src: 'https://img.freepik.com/premium-photo/row-colorful-fabrics-with-rainbow-colors-generative-ai-image_1146582-8900.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Fabric Printing Class' },
+    { id: 6, type: 'image', category: 'Conferences', src: 'https://img.freepik.com/premium-photo/beautiful-elegant-silk-concept_926199-384005.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80', title: 'Stakeholder Meeting' },
   ];
 
   const filteredItems = filter === 'All' ? mediaItems : mediaItems.filter(item => item.category === filter);

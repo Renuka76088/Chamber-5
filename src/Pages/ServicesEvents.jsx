@@ -17,17 +17,17 @@ export default function ServicesEvents() {
 
    const slides = [
     {
-      img: "https://img.freepik.com/free-photo/business-event_53876-138077.jpg",
+      img: "https://img.freepik.com/free-photo/sewing-threads-many-colors-needle-thimble-placed-neatly_463209-36.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
       title: "18th PAREKH CHAMBER OF TEXTILE Capital Markets Summit",
       date: "23/05/2026 - 23/05/2026",
     },
     {
-      img: "https://img.freepik.com/free-photo/business-people-meeting_53876-104515.jpg",
+      img: "https://img.freepik.com/premium-photo/colorful-fabric-rainbow-is-popular-choice_1106493-249267.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
       title: "Global Business Meet 2026",
       date: "10/06/2026 - 12/06/2026",
     },
     {
-      img: "https://img.freepik.com/free-photo/group-business-people-working-office_1303-22863.jpg",
+      img: "https://img.freepik.com/free-photo/high-angle-textile-with-thread-needle_23-2148614715.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
       title: "International Trade Summit",
       date: "01/07/2026 - 03/07/2026",
     },

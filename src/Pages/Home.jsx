@@ -5,16 +5,10 @@ import { FaFacebookF, FaInstagram, FaYoutube, FaXTwitter } from "react-icons/fa6
 
 
 const images = [
-  "https://img.freepik.com/premium-photo/large-group-people-are-sitting-room-with-sign-that-says-no_1206963-28246.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/multicultural-business-people-working-while-sitting-meeting-table-aigf_31965-481011.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/group-people-sitting-around-conference-table-with-one-them-wearing-suit_1206963-27923.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/hosting-panel-discussion-significance-generative-ai_1169648-121343.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66006.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/group-people-sit-around-table-conference-room_1298309-36716.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/asian-indian-business-people-corporate-culture-working-office-concept-with-laptop-papers-meetings-presentations-discussions_466689-15135.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/four-men-sitting-table-with-paper-it_1206963-27840.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/group-people-sit-conference-table-with-sign-them-that-says-garden_1206963-27825.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-  "https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66029.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
+  "https://img.freepik.com/premium-photo/colorful-fabric-rainbow-is-popular-choice_1106493-249311.jpg?ga=GA1.1.124606815.1772781809&semt=ais_hybrid&w=740&q=80",
+  "https://img.freepik.com/premium-photo/close-up-various-colored-fabric-swatches-suitable-textile-design-projects_153912-112310.jpg?ga=GA1.1.124606815.1772781809&semt=ais_hybrid&w=740&q=80",
+  "https://img.freepik.com/premium-photo/textile-designer-isolated-flat-color-background_980928-38343.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
+ 
 ];
 
 
@@ -23,16 +17,9 @@ export default function Home() {
 
 
    const images1 = [
-    "https://img.freepik.com/free-photo/portrait-business-executives-participating-business-meeting-conference-center_107420-63840.jpg",
-    "https://img.freepik.com/free-photo/business-people-meeting_53876-104515.jpg",
-    "https://img.freepik.com/free-photo/group-business-people-working-office_1303-22863.jpg",
-      "https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66029.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-      "https://img.freepik.com/premium-photo/group-people-sit-conference-table-with-sign-them-that-says-garden_1206963-27825.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-        "https://img.freepik.com/premium-photo/four-men-sitting-table-with-paper-it_1206963-27840.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-          "https://img.freepik.com/premium-photo/large-group-people-are-sitting-room-with-sign-that-says-no_1206963-28246.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-            "https://img.freepik.com/premium-photo/multicultural-business-people-working-while-sitting-meeting-table-aigf_31965-481011.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-              "https://img.freepik.com/premium-photo/hosting-panel-discussion-significance-generative-ai_1169648-121343.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
-                "https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66006.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
+   "https://img.freepik.com/premium-photo/colorful-fabric-rainbow-is-popular-choice_1106493-249311.jpg?ga=GA1.1.124606815.1772781809&semt=ais_hybrid&w=740&q=80",
+  "https://img.freepik.com/premium-photo/close-up-various-colored-fabric-swatches-suitable-textile-design-projects_153912-112310.jpg?ga=GA1.1.124606815.1772781809&semt=ais_hybrid&w=740&q=80",
+  "https://img.freepik.com/premium-photo/textile-designer-isolated-flat-color-background_980928-38343.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80",
   ];
 
   const [current, setCurrent] = useState(0);
@@ -88,15 +75,15 @@ export default function Home() {
       {/* TEXT */}
       <div className="absolute inset-0 flex flex-col justify-center items-center text-center text-white px-4">
         <p className="text-sm md:text-lg tracking-widest mb-2">
-          5<sup>th</sup> to 8<sup>th</sup> November 2025
+         
         </p>
 
         <h1 className="text-2xl md:text-6xl font-bold leading-tight">
-          PAREKH CHAMBER OF TEXTILE BUSINESS DELEGATION TO
+           Parekh Chamber of Textile Business Delegation
         </h1>
 
-        <h2 className="text-xl md:text-5xl font-extrabold mt-2">
-          YEREVAN, ARMENIA
+        <h2 className="text-xl md:text-5xl uppercase font-extrabold mt-2">
+     Empowering Industry Connections
         </h2>
       </div>
 

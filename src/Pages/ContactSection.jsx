@@ -7,7 +7,7 @@ export default function ContactSection() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66029.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
+          src="https://img.freepik.com/free-photo/texture-orange-red-crumpled-fabric_23-2148516009.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
           alt="bg"
           className="w-full h-full object-cover"
         />

@@ -18,7 +18,7 @@ export default function NewsSection() {
         <div className="bg-white flex flex-col sm:flex-row shadow-md hover:shadow-lg transition">
           <div className="sm:w-1/2">
             <img
-              src="https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66029.jpg"
+              src="https://img.freepik.com/premium-photo/person-working-embroidery-workshop_862994-169809.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
               alt=""
               className="w-full h-full object-cover"
             />
@@ -50,7 +50,7 @@ export default function NewsSection() {
         {/* Legacy Card */}
         <div className="bg-white p-3 shadow-md hover:shadow-lg transition">
           <img
-            src="https://img.freepik.com/premium-photo/group-people-sit-around-table-conference-room_1298309-36716.jpg"
+            src="https://img.freepik.com/premium-photo/row-colorful-fabrics-with-rainbow-colors-generative-ai-image_1146582-8900.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
             alt=""
             className="w-full h-full object-cover rounded"
           />
@@ -59,7 +59,7 @@ export default function NewsSection() {
         {/* Video Card */}
         <div className="bg-white relative shadow-md hover:shadow-lg transition overflow-hidden rounded">
           <img
-            src="https://img.freepik.com/premium-photo/group-people-sit-conference-table-with-sign-them-that-says-garden_1206963-27825.jpg"
+            src="https://img.freepik.com/premium-photo/full-frame-shot-crumpled-red-satin_1627186-281.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
             alt=""
             className="w-full h-full object-cover"
           />

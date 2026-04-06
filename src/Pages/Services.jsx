@@ -85,26 +85,43 @@ function Services() {
         </div>
 
         {/* FUNCTIONS */}
-        <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm mb-10">
-          <h3 className="text-2xl font-semibold text-[#0d2b57] mb-6">
-            Functions
-          </h3>
+    <div className="bg-white rounded-2xl p-6 md:p-10 shadow-sm mb-10">
+  
+  <div className="grid md:grid-cols-2 gap-8 items-center">
 
-          <ul className="space-y-4 text-gray-600 text-[15px] leading-relaxed">
-            <li>• To assist and facilitate growth and development of the textile industry.</li>
-            <li>• To promote textile consumption in India and abroad.</li>
-            <li>• To organize exporters' delegations and assist inbound textile trade delegations.</li>
-            <li>• To collect, analyze and circulate textile industry information.</li>
-            <li>• To promote knowledge via seminars, exhibitions, trade fairs & campaigns.</li>
-            <li>• To undertake Research & Development in textiles.</li>
-            <li>• To represent textile industry interests to Government & authorities.</li>
-            <li>• To collaborate with trade bodies in India & globally.</li>
-            <li>• To undertake CSR and public welfare projects.</li>
-            <li>• To publish newsletters and industry documentation.</li>
-            <li>• Represent members in trade union conciliations.</li>
-            <li>• Advise members on legal & compliance matters.</li>
-          </ul>
-        </div>
+    {/* LEFT CONTENT */}
+    <div>
+      <h3 className="text-2xl font-semibold text-[#0d2b57] mb-6">
+        Functions
+      </h3>
+
+      <ul className="space-y-4 text-gray-600 text-[15px] leading-relaxed">
+        <li>• To assist and facilitate growth and development of the textile industry.</li>
+        <li>• To promote textile consumption in India and abroad.</li>
+        <li>• To organize exporters' delegations and assist inbound textile trade delegations.</li>
+        <li>• To collect, analyze and circulate textile industry information.</li>
+        <li>• To promote knowledge via seminars, exhibitions, trade fairs & campaigns.</li>
+        <li>• To undertake Research & Development in textiles.</li>
+        <li>• To represent textile industry interests to Government & authorities.</li>
+        <li>• To collaborate with trade bodies in India & globally.</li>
+        <li>• To undertake CSR and public welfare projects.</li>
+        <li>• To publish newsletters and industry documentation.</li>
+        <li>• Represent members in trade union conciliations.</li>
+        <li>• Advise members on legal & compliance matters.</li>
+      </ul>
+    </div>
+
+    {/* RIGHT IMAGE */}
+    <div className="w-full h-full">
+      <img
+        src="https://img.freepik.com/premium-photo/person-working-embroidery-workshop_862994-169809.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
+        alt="Textile Industry"
+        className="w-full h-full object-cover rounded-xl shadow-md"
+      />
+    </div>
+
+  </div>
+</div>
 
         {/* TAXATION + CSR GRID */}
         <div className="grid md:grid-cols-2 gap-8">

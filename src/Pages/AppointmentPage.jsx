@@ -26,7 +26,7 @@ const AppointmentPage = () => {
                     <span className="text-2xl">📍</span>
                     <div>
                       <p className="font-bold">Our Office</p>
-                      <p className="text-blue-100 text-sm">Chamber of Textile, New Delhi, India</p>
+                      <p className="text-blue-100 text-sm">Chamber of Textile, BENGALURU, KA, INDIA</p>
                     </div>
                   </div>
                   <div className="flex items-start gap-4">
