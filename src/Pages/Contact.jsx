@@ -1,4 +1,6 @@
 import React from 'react'
+import { motion } from "framer-motion";
+import { Mail, Phone, MapPin, Send, MessageSquare } from "lucide-react";
 
 function Contact() {
   return (
@@ -32,137 +34,139 @@ function Contact() {
       </div>
     </section>
  
-     <div className="relative w-full min-h-screen text-white">
-      
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img
-          src="https://img.freepik.com/premium-photo/conference-table-with-sign-that-says-name-state-america_984237-66029.jpg?ga=GA1.1.124606815.1772781809&semt=ais_incoming&w=740&q=80"
-          alt="bg"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-[#0b2c4a]/90"></div>
-      </div>
+      <section className="relative bg-[#f3f5f8] py-20 overflow-hidden">
+      {/* Background Decorative Circles */}
+      <div className="absolute top-0 left-0 w-96 h-96 bg-blue-100 rounded-full blur-3xl opacity-40 -translate-x-1/2 -translate-y-1/2"></div>
+      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-orange-50 rounded-full blur-3xl opacity-40 translate-x-1/3 translate-y-1/3"></div>
 
-      {/* Content */}
-      <div className="relative z-10 px-6 md:px-12 py-12 grid grid-cols-1 lg:grid-cols-2 gap-10">
-        
-        {/* LEFT SIDE */}
-        <div>
-          {/* Small Title */}
-          <p className="text-sm tracking-widest text-orange-400 mb-2 flex items-center gap-2">
-            <span className="w-6 h-[2px] bg-orange-400"></span>
-            CONTACT US
-          </p>
-
-          {/* Heading */}
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 leading-snug">
-            Do You Have any <br />
-            <span className="text-orange-500">Questions?</span>
+      <div className="relative max-w-7xl mx-auto px-6 md:px-12">
+        {/* HEADER SECTION */}
+        <div className="text-center mb-16">
+          <div className="flex justify-center items-center gap-3 mb-2">
+            <div className="w-10 h-[2px] bg-[#f26522]"></div>
+            <p className="text-sm font-bold text-gray-600 tracking-widest uppercase">
+              Get In Touch
+            </p>
+            <div className="w-10 h-[2px] bg-[#f26522]"></div>
+          </div>
+          <h2 className="text-[34px] md:text-[45px] font-extrabold text-[#4a86d4]">
+            Connect With Our Experts
           </h2>
-
-          {/* FORM */}
-          <form className="space-y-4 max-w-xl">
-            
-            {/* Name */}
-            <input
-              type="text"
-              placeholder="Your Name *"
-              className="w-full bg-transparent border border-white/40 px-4 py-3 text-sm focus:outline-none focus:border-white"
-            />
-
-            {/* Phone + Email */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-              
-              {/* Country Code */}
-              <select className="bg-white text-black px-2 py-3 text-sm rounded">
-                <option>+91</option>
-              </select>
-
-              {/* Phone */}
-              <input
-                type="text"
-                placeholder="Phone Number *"
-                className="col-span-2 sm:col-span-1 bg-transparent border border-white/40 px-4 py-3 text-sm focus:outline-none"
-              />
-
-              {/* Email */}
-              <input
-                type="email"
-                placeholder="Your Email *"
-                className="col-span-3 sm:col-span-1 bg-transparent border border-white/40 px-4 py-3 text-sm focus:outline-none"
-              />
-            </div>
-
-            {/* Message */}
-            <textarea
-              rows="4"
-              placeholder="Message *"
-              className="w-full bg-transparent border border-white/40 px-4 py-3 text-sm focus:outline-none"
-            ></textarea>
-
-            {/* Info Row */}
-            <div className="flex justify-between text-xs text-white/70">
-              <span>Maximum 200 characters.</span>
-              <span>0 / 200</span>
-            </div>
-
-            {/* CAPTCHA */}
-            <div>
-              <p className="text-sm mb-2">Verification *</p>
-
-              <div className="flex items-center gap-3 mb-2">
-                <div className="bg-white text-black px-4 py-2 text-sm rounded">
-                  2b7k
-                </div>
-                <button type="button" className="text-xs underline">
-                  Refresh
-                </button>
-              </div>
-
-              <input
-                type="text"
-                placeholder="Enter Answer"
-                className="w-full bg-transparent border border-white/40 px-4 py-3 text-sm focus:outline-none"
-              />
-            </div>
-
-            {/* Button */}
-            <button className="mt-4 bg-orange-500 hover:bg-orange-600 transition px-6 py-3 rounded-full text-sm font-semibold">
-              Send Message
-            </button>
-          </form>
+          <p className="mt-4 text-gray-500 max-w-2xl mx-auto text-lg">
+            Have questions about our textile services or global reach? We're here to help you grow your business.
+          </p>
         </div>
 
-        {/* RIGHT SIDE */}
-        <div className="flex flex-col justify-center">
-          
-          <h3 className="text-xl md:text-2xl font-semibold mb-6">
-            Are You Going to <br /> Implement Project?
-          </h3>
-
-          {/* Address */}
-          <div className="mb-6 text-sm leading-relaxed text-white/90">
-            <p className="uppercase text-xs text-white/60 mb-2">
-              Head Office
-            </p>
-      
-BENGALURU, KA, INDIA - 560001,<br />
+        <div className="grid lg:grid-cols-3 gap-10">
+          {/* LEFT COLUMN: CONTACT INFO CARDS */}
+          <div className="lg:col-span-1 space-y-6">
+            {[
+              {
+                icon: <Phone className="text-white" size={24} />,
+                title: "Call Us",
+                detail: "+91 98765 43210",
+                bg: "bg-[#4a86d4]",
+              },
+              {
+                icon: <Mail className="text-white" size={24} />,
+                title: "Email Us",
+                detail: "info@parekhchamber.com",
+                bg: "bg-[#f26522]",
+              },
+              {
+                icon: <MapPin className="text-white" size={24} />,
+                title: "Visit Us",
+                detail: "BENGALURU, KA, INDIA",
+                bg: "bg-gray-800",
+              },
+            ].map((item, idx) => (
+              <motion.div
+                key={idx}
+                whileHover={{ scale: 1.02 }}
+                className="bg-white p-6 rounded-2xl shadow-sm border border-gray-100 flex items-center gap-5 transition-all duration-300 hover:shadow-md"
+              >
+                <div className={`p-4 ${item.bg} rounded-xl shadow-lg`}>
+                  {item.icon}
+                </div>
+                <div>
+                  <h4 className="font-bold text-gray-800">{item.title}</h4>
+                  <p className="text-gray-500 text-sm">{item.detail}</p>
+                </div>
+              </motion.div>
+            ))}
             
+            {/* Working Hours Card */}
+            <div className="bg-[#4a86d4] p-8 rounded-2xl text-white relative overflow-hidden group shadow-xl">
+               <div className="relative z-10">
+                  <h4 className="text-xl font-bold mb-4 flex items-center gap-2">
+                    <MessageSquare size={20} /> Office Hours
+                  </h4>
+                  <ul className="space-y-2 opacity-90 text-sm">
+                    <li className="flex justify-between"><span>Mon - Fri:</span> <span>9:00 AM - 7:00 PM</span></li>
+                    <li className="flex justify-between"><span>Saturday:</span> <span>10:00 AM - 4:00 PM</span></li>
+                    <li className="flex justify-between border-t border-white/20 pt-2 mt-2"><span>Sunday:</span> <span className="font-bold">Closed</span></li>
+                  </ul>
+               </div>
+               <div className="absolute -bottom-10 -right-10 w-32 h-32 bg-white/10 rounded-full group-hover:scale-150 transition-transform duration-700"></div>
+            </div>
           </div>
 
-          {/* Info Text */}
-          <p className="text-sm leading-relaxed text-white/90">
-            If you have specific Trade / B2B Query/Requirement, please{" "}
-            <span className="text-orange-400 font-semibold">
-              Login or Register
-            </span>{" "}
-            and place your 'Service Request'. <br />
-            You will get prompt service from our team.
-          </p>
+          {/* RIGHT COLUMN: CONTACT FORM (Glassmorphism) */}
+          <div className="lg:col-span-2">
+            <motion.div 
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              className="bg-white/70 backdrop-blur-xl p-8 md:p-12 rounded-[30px] shadow-2xl border border-white relative"
+            >
+              <form className="grid md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Full Name</label>
+                  <input 
+                    type="text" 
+                    placeholder="John Doe" 
+                    className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#4a86d4] focus:ring-2 focus:ring-[#4a86d4]/20 outline-none transition-all duration-300 bg-white/50"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Email Address</label>
+                  <input 
+                    type="email" 
+                    placeholder="john@example.com" 
+                    className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#4a86d4] focus:ring-2 focus:ring-[#4a86d4]/20 outline-none transition-all duration-300 bg-white/50"
+                  />
+                </div>
+                <div className="md:col-span-2 space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Subject</label>
+                  <select className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#4a86d4] focus:ring-2 focus:ring-[#4a86d4]/20 outline-none transition-all duration-300 bg-white/50 appearance-none">
+                    <option>Business Enquiry</option>
+                    <option>Membership Support</option>
+                    <option>E-Auction Help</option>
+                    <option>Others</option>
+                  </select>
+                </div>
+                <div className="md:col-span-2 space-y-2">
+                  <label className="text-sm font-bold text-gray-700 ml-1">Your Message</label>
+                  <textarea 
+                    rows="5" 
+                    placeholder="How can we help you today?" 
+                    className="w-full px-5 py-4 rounded-xl border border-gray-200 focus:border-[#4a86d4] focus:ring-2 focus:ring-[#4a86d4]/20 outline-none transition-all duration-300 bg-white/50 resize-none"
+                  ></textarea>
+                </div>
+                <div className="md:col-span-2">
+                  <motion.button 
+                    whileHover={{ scale: 1.01 }}
+                    whileTap={{ scale: 0.98 }}
+                    className="w-full bg-[#f26522] hover:bg-[#d9561a] text-white font-bold py-4 rounded-xl shadow-lg shadow-orange-200 transition-all duration-300 flex items-center justify-center gap-3"
+                  >
+                    Send Message <Send size={20} />
+                  </motion.button>
+                </div>
+              </form>
+            </motion.div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
  </>
   )
 }
