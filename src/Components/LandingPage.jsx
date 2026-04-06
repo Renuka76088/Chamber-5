@@ -7,6 +7,7 @@ import NewsSection from '../Pages/NewsSection'
 import ContactSection from '../Pages/ContactSection'
 import AboutUs from '../Pages/AboutUs'
 import Gallery from '../Pages/galleryImages'
+import ContactUs from '../Pages/ContactUs'
 
 function LandingPage() {
   return (
@@ -17,7 +18,7 @@ function LandingPage() {
   <CorporateMembers/>
   
   {/* < NewsSection/> */}
-  <ContactSection/>
+  <ContactUs/>
   
   </>
   )
