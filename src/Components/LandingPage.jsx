@@ -12,10 +12,10 @@ function LandingPage() {
   <>
   <Home/>
   <AboutUs/>
-  <ServicesEvents/>
+
   <CorporateMembers/>
   
-  < NewsSection/>
+  {/* < NewsSection/> */}
   <ContactSection/>
   
   </>
