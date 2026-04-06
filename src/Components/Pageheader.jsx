@@ -123,35 +123,42 @@ const dropdownItems = [
 
 </div>
       {/* CENTER (Desktop Menu) */}
-      <nav className="hidden md:flex gap-6 text-sm font-medium mx-auto">
-     {menuItems.map((item, i) => (
-  <div key={i} className="relative group">
-    
-    <div
-      onClick={() => !item.hasDropdown && navigate(item.path)}
-      className="flex items-center gap-1 cursor-pointer hover:opacity-80"
-    >
-      {item.name}
-      {item.hasDropdown && <ChevronDown size={14} />}
-    </div>
-
-    {/* Dropdown */}
-    {item.hasDropdown && (
-      <div className="absolute top-full left-0 bg-white text-black rounded-md shadow-lg mt-2 opacity-0 group-hover:opacity-100 invisible group-hover:visible transition w-64 z-50">
-        {dropdownItems.map((sub, idx) => (
-          <div
-            key={idx}
-            onClick={() => navigate(`/${sub.toLowerCase().replace(/\s+/g, "-")}`)}
-            className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
-          >
-            {sub}
-          </div>
-        ))}
+   <nav className="hidden md:flex gap-6 text-sm font-medium mx-auto">
+  {menuItems.map((item, i) => (
+    <div key={i} className="relative group">
+      
+      {/* MENU */}
+      <div
+        onClick={() => !item.hasDropdown && navigate(item.path)}
+        className="flex items-center gap-1 cursor-pointer hover:opacity-80 py-2"
+      >
+        {item.name}
+        {item.hasDropdown && <ChevronDown size={14} />}
       </div>
-    )}
-  </div>
-))}
-      </nav>
+
+      {/* DROPDOWN */}
+      {item.hasDropdown && (
+        <div className="absolute top-full left-0 pt-2 w-64 z-50">
+          
+          {/* invisible hover bridge */}
+          <div className="h-2"></div>
+
+          <div className="bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-200">
+            {dropdownItems.map((sub, idx) => (
+              <div
+                key={idx}
+                onClick={() => navigate(`/${sub.toLowerCase().replace(/\s+/g, "-")}`)}
+                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
+              >
+                {sub}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  ))}
+</nav>
     
       {/* RIGHT */}
       <Menu
