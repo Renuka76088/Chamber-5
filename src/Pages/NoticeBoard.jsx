@@ -88,7 +88,7 @@ const NoticeBoard = () => {
             <div className="bg-gradient-to-br from-[#0d2b57] to-[#1a4b8f] rounded-2xl p-6 text-white shadow-lg">
               <h4 className="font-bold mb-2">Need Assistance?</h4>
               <p className="text-xs text-blue-100 mb-4 leading-relaxed">
-                Notice board se judi kisi bhi jaankari ke liye hamare helpdesk par sampark karein.
+               For any information related to the Notice Board, please contact our helpdesk.
               </p>
               <div className="bg-white/10 p-3 rounded-xl text-center font-bold text-sm backdrop-blur-md">
                 📞 +91 11 2345 6789

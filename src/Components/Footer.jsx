@@ -49,11 +49,11 @@ export default function Footer() {
        
 
             <div className="rounded-xl overflow-hidden border-2 border-white/20 shadow-xl">
-              <iframe
-                src="https://www.google.com/maps?q=Indian%20Chamber%20of%20Commerce%20Kolkata&output=embed"
-                className="w-full h-[200px]"
-                loading="lazy"
-              ></iframe>
+            <iframe
+  src="https://www.google.com/maps?q=Bangalore%20India&output=embed"
+  className="w-full h-[200px]"
+  loading="lazy"
+></iframe>
             </div>
           </div>
 
