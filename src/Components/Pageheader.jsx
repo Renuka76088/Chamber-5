@@ -161,11 +161,11 @@ const dropdownItems = [
   ))}
 </nav>
     
-      {/* RIGHT */}
-      <Menu
-        className="cursor-pointer"
-        onClick={() => setOpen(true)}
-      />
+  {/* RIGHT */}
+<Menu
+  className="cursor-pointer md:hidden"
+  onClick={() => setOpen(true)}
+/>
     
     </div>
     
