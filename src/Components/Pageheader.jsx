@@ -123,13 +123,17 @@ const dropdownItems = [
 
 </div>
       {/* CENTER (Desktop Menu) */}
-   <nav className="hidden md:flex gap-6 text-sm font-medium mx-auto">
+<nav className="hidden md:flex gap-6 text-sm font-medium mx-auto">
   {menuItems.map((item, i) => (
-    <div key={i} className="relative group">
+    <div key={i} className="relative">
       
       {/* MENU */}
       <div
-        onClick={() => !item.hasDropdown && navigate(item.path)}
+        onClick={() =>
+          item.hasDropdown
+            ? toggleDropdown(i)
+            : navigate(item.path)
+        }
         className="flex items-center gap-1 cursor-pointer hover:opacity-80 py-2"
       >
         {item.name}
@@ -137,23 +141,20 @@ const dropdownItems = [
       </div>
 
       {/* DROPDOWN */}
-      {item.hasDropdown && (
-        <div className="absolute top-full left-0 pt-2 w-64 z-50">
-          
-          {/* invisible hover bridge */}
-          <div className="h-2"></div>
-
-          <div className="bg-white text-black rounded-md shadow-lg opacity-0 group-hover:opacity-100 invisible group-hover:visible transition duration-200">
-            {dropdownItems.map((sub, idx) => (
-              <div
-                key={idx}
-                onClick={() => navigate(`/${sub.toLowerCase().replace(/\s+/g, "-")}`)}
-                className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
-              >
-                {sub}
-              </div>
-            ))}
-          </div>
+      {item.hasDropdown && activeDropdown === i && (
+        <div className="absolute top-full left-0 mt-2 w-64 bg-white text-black rounded-md shadow-lg z-50">
+          {dropdownItems.map((sub, idx) => (
+            <div
+              key={idx}
+              onClick={() => {
+                navigate(`/${sub.toLowerCase().replace(/\s+/g, "-")}`);
+                setActiveDropdown(null); // close after click
+              }}
+              className="px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm"
+            >
+              {sub}
+            </div>
+          ))}
         </div>
       )}
     </div>

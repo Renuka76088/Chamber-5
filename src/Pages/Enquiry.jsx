@@ -8,7 +8,7 @@ const Enquiry = () => {
         {/* FORM HEADER */}
         <div className="mb-8 border-l-4 border-[#0d2b57] pl-4">
           <h2 className="text-2xl md:text-3xl font-bold text-[#0d2b57] underline decoration-1 underline-offset-8">
-            Apply for Membership (e- Form)
+            Apply for Membership
           </h2>
         </div>
 
